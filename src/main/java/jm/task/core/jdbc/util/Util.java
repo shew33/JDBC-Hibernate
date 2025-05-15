@@ -40,7 +40,7 @@ public class Util {
             settings.put(Environment.PASS, "3748");
             settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
             settings.put(Environment.SHOW_SQL, "true");
-            settings.put(Environment.HBM2DDL_AUTO, "update"); // временно для авто-создания
+            settings.put(Environment.HBM2DDL_AUTO, "update"); //временно для авто-создания
 
             configuration.setProperties(settings);
             configuration.addAnnotatedClass(User.class);
