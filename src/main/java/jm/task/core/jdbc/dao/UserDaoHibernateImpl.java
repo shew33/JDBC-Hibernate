@@ -19,7 +19,7 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void createUsersTable() {
         executeInsideTransaction(session ->
-                session.createSQLQuery(CREATE_USERS_TABLE).executeUpdate()
+                session.createNativeQuery(CREATE_USERS_TABLE).executeUpdate()
         );
         logger.info("таблица пользователей успешно создана");
     }
@@ -27,7 +27,7 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void dropUsersTable() {
         executeInsideTransaction(session ->
-                session.createSQLQuery(DROP_USERS_TABLE).executeUpdate()
+                session.createNativeQuery(DROP_USERS_TABLE).executeUpdate()
         );
         logger.info("таблица пользователей удалена");
     }
@@ -70,9 +70,8 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void cleanUsersTable() {
         executeInsideTransaction(session ->
-                session.createSQLQuery(TRUNCATE_USERS_TABLE).executeUpdate()
+                session.createNativeQuery(TRUNCATE_USERS_TABLE).executeUpdate()
         );
         logger.info("таблица пользователей очищена.");
     }
 }
-

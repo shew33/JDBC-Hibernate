@@ -21,12 +21,12 @@ public class Main {
 
     try (InputStream input = Main.class.getClassLoader().getResourceAsStream("application.properties")) {
             if (input == null) {
-                logger.error("application.properties не найден");
+                logger.error("properties не найден");
                 return;
             }
             properties.load(input);
         } catch (Exception e) {
-            logger.error("Ошибка при загрузке application.properties", e);
+            logger.error("ошибка при загрузке properties", e);
             return;
         }
 
@@ -34,12 +34,12 @@ public class Main {
         UserDao userDao;
         if ("jdbc".equalsIgnoreCase(realization)) {
             userDao = new UserDaoJDBCImpl();
-            logger.info("Используется реализация: JDBC");
+            logger.info("Используется JDBC");
         } else if ("hibernate".equalsIgnoreCase(realization)) {
             userDao = new UserDaoHibernateImpl();
-            logger.info("Используется реализация: Hibernate");
+            logger.info("Используется Hibernate");
         } else {
-            logger.error("Недопустимое значение realization в application.properties: {}", realization);
+            logger.error("Недопустимое значение realization в properties: {}", realization);
             return;
         }
 
@@ -56,7 +56,7 @@ public class Main {
         if (users != null && !users.isEmpty()) {
             users.forEach(user -> logger.info(user.toString()));
         } else {
-            logger.warn("cписок пользователей пуст или не инициализирован.");
+            logger.warn("Список пользователей пуст");
         }
 
         userService.cleanUsersTable();
