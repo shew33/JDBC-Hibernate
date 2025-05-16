@@ -20,7 +20,7 @@ public class HibernateCommandExecutor {
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) transaction.rollback();
-            logger.error("Ошибка при выполнении транзакции: {}", e.getMessage(), e);
+            logger.error("ошибка при выполнении транзакции: {}", e.getMessage(), e);
         }
     }
 
@@ -28,7 +28,7 @@ public class HibernateCommandExecutor {
         try (Session session = Util.getSessionFactory().openSession()) {
             return function.apply(session);
         } catch (Exception e) {
-            logger.error("Ошибка при выполнении запроса: {}", e.getMessage(), e);
+            logger.error("ошибка при выполнении запроса: {}", e.getMessage(), e);
             return null;
         }
     }

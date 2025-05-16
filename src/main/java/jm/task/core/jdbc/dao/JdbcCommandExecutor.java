@@ -13,7 +13,7 @@ public class JdbcCommandExecutor {
         try {
             command.accept(connection);
         } catch (SQLException e) {
-            logger.error("SQL Ошибка: {}", e.getMessage());
+            logger.error("SQL ошибка - {}", e.getMessage());
         }
     }
 
