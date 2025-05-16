@@ -19,8 +19,7 @@ public class Main {
     public static void main(String[] args) {
         Properties properties = new Properties();
 
-        // Загружаем application.properties
-        try (InputStream input = Main.class.getClassLoader().getResourceAsStream("application.properties")) {
+    try (InputStream input = Main.class.getClassLoader().getResourceAsStream("application.properties")) {
             if (input == null) {
                 logger.error("application.properties не найден");
                 return;
@@ -31,7 +30,6 @@ public class Main {
             return;
         }
 
-        // Определяем реализацию DAO
         String realization = properties.getProperty("realization");
         UserDao userDao;
         if ("jdbc".equalsIgnoreCase(realization)) {
@@ -45,7 +43,6 @@ public class Main {
             return;
         }
 
-        // Инжектим реализацию в сервис
         UserService userService = new UserServiceImpl(userDao);
 
         userService.createUsersTable();
@@ -59,7 +56,7 @@ public class Main {
         if (users != null && !users.isEmpty()) {
             users.forEach(user -> logger.info(user.toString()));
         } else {
-            logger.warn("Список пользователей пуст или не инициализирован.");
+            logger.warn("cписок пользователей пуст или не инициализирован.");
         }
 
         userService.cleanUsersTable();

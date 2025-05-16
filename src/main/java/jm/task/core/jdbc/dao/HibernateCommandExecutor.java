@@ -14,13 +14,28 @@ public class HibernateCommandExecutor {
 
     public static void executeInsideTransaction(Consumer<Session> action) {
         Transaction transaction = null;
-        try (Session session = Util.getSessionFactory().openSession()) {
+        Session session = null;
+
+        try {
+            session = Util.getSessionFactory().openSession();
             transaction = session.beginTransaction();
+
             action.accept(session);
+
             transaction.commit();
         } catch (Exception e) {
-            if (transaction != null) transaction.rollback();
+            if (transaction != null && transaction.isActive()) {
+                try {
+                    transaction.rollback();
+                } catch (Exception rollbackEx) {
+                    logger.error("ошибка при откате транзакции: {}", rollbackEx.getMessage(), rollbackEx);
+                }
+            }
             logger.error("ошибка при выполнении транзакции: {}", e.getMessage(), e);
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
         }
     }
 
