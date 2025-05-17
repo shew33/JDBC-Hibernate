@@ -3,7 +3,6 @@ package jm.task.core.jdbc.util;
 import jm.task.core.jdbc.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.cfg.Environment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,12 +21,10 @@ public class Util {
         try (InputStream input = Util.class.getClassLoader().getResourceAsStream("application.properties")) {
             if (input == null) {
                 logger.error("файл .properties не найден");
-                throw new RuntimeException("не найден файл .properties");
             }
             properties.load(input);
         } catch (IOException e) {
             logger.error("ошибка при загрузке .properties", e);
-            throw new RuntimeException("ошибка при загрузке .properties", e);
         }
     }
 
@@ -40,7 +37,7 @@ public class Util {
             );
         } catch (SQLException e) {
             logger.error("ошибка подключения к БД", e);
-            throw new RuntimeException("ошибка подключения к БД", e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -51,13 +48,13 @@ public class Util {
             Configuration configuration = new Configuration();
             Properties settings = new Properties();
 
-            settings.put(Environment.DRIVER, properties.getProperty("db.driver"));
-            settings.put(Environment.URL, properties.getProperty("db.url"));
-            settings.put(Environment.USER, properties.getProperty("db.user"));
-            settings.put(Environment.PASS, properties.getProperty("db.password"));
-            settings.put(Environment.DIALECT, properties.getProperty("hibernate.dialect"));
-            settings.put(Environment.SHOW_SQL, properties.getProperty("hibernate.show_sql"));
-            settings.put(Environment.HBM2DDL_AUTO, properties.getProperty("hibernate.hbm2ddl_auto"));
+            settings.put("hibernate.connection.driver_class", properties.getProperty("db.driver"));
+            settings.put("hibernate.connection.url", properties.getProperty("db.url"));
+            settings.put("hibernate.connection.username", properties.getProperty("db.user"));
+            settings.put("hibernate.connection.password", properties.getProperty("db.password"));
+            settings.put("hibernate.dialect", properties.getProperty("hibernate.dialect"));
+            settings.put("hibernate.show_sql", properties.getProperty("hibernate.show_sql"));
+            settings.put("hibernate.hbm2ddl.auto", properties.getProperty("hibernate.hbm2ddl_auto"));
 
             configuration.setProperties(settings);
             configuration.addAnnotatedClass(User.class);
@@ -65,7 +62,7 @@ public class Util {
             sessionFactory = configuration.buildSessionFactory();
         } catch (Exception e) {
             logger.error("ошибка создания SessionFactory", e);
-            throw new RuntimeException("ошибка создания SessionFactory", e);
+            throw new RuntimeException(e);
         }
     }
 
