@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f9b3bf2c-b0e1-4987-b83c-86995cd47902" name="Changes" comment="финальная версия" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="b3ba6e4fa2511f44f632ff3cc45f7351e6ce49fb" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:shew33/JDBC-Hibernate.git",
+    "accountId": "77a3090e-795c-43f7-8263-7f294d915568"
+  }
+}]]></component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "git-widget-placeholder": "feature/Шевченко-Юрий-задача-1.1.4",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.UserServiceTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jm.task.core.jdbc.Main" />
+      <module name="TaskJDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jm.task.core.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.cleanUsersTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="cleanUsersTable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.getAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="getAllUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.removeUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="removeUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserServiceTest.removeUserById" />
+        <item itemvalue="JUnit.UserServiceTest.getAllUsers" />
+        <item itemvalue="JUnit.UserServiceTest.cleanUsersTable" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Physical" />
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Удалил IDE и сборочные файлы, обновил .gitignore">
+      <option name="closed" value="true" />
+      <created>1747412927428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747412927428</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Удалил IDE и сборочные файлы, обновил .gitignore">
+      <option name="closed" value="true" />
+      <created>1747412945510</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747412945510</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Удалил IDE и сборочные файлы, обновил .gitignore">
+      <option name="closed" value="true" />
+      <created>1747423056754</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747423056754</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Удалил IDE и сборочные файлы, обновил .gitignore">
+      <option name="closed" value="true" />
+      <created>1747423066570</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747423066570</updated>
+    </task>
+    <task id="LOCAL-00005" summary="финальная версия">
+      <option name="closed" value="true" />
+      <created>1747423095549</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747423095550</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Финальные изменения" />
+    <MESSAGE value="Финальная версия" />
+    <MESSAGE value="Удалил IDE и сборочные файлы, обновил .gitignore" />
+    <MESSAGE value="финальная версия" />
+    <option name="LAST_COMMIT_MESSAGE" value="финальная версия" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
